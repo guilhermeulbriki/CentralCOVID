@@ -37,7 +37,31 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section class="form">
+        <div class="health">
+          <h3>Nos diga uma coisa, como está a sua saúde?</h3>
+          <div>
+            <span class="good">
+              <a>
+                <img src="./assets/images/icons/icon-happy.png" alt="good-health">
+                <h4>Boa</h4>
+              </a>
+            </span>
+            <span class="bad">
+              <a href="ficha.php">
+                <img src="./assets/images/icons/icon-sad.png" alt="bad-health">
+                <h4>Ruim</h4>
+              </a>
+            </span>
+            </span>
+          </div>
+      </section>
+      <div id="map"></div>
+      <legend id="legend">
+        <h3>Legendas</h3>
+      </legend>
+    </main>
     <footer>
       <div class="footer-information">
         <span class="images">
@@ -53,6 +77,9 @@
     </footer>
   </div>
   <script src="./menu.js"></script>
+  <script src="./maps.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8FX4dJt-hPT_e5uWKZJRWE1hE5Ja1EkQ&callback=initMap"></script>
 </body>
 
 </html>
