@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div id="container" class="container">
     <header>
       <div class="header-container">
         <span>
@@ -32,6 +32,9 @@
               <li class="li-three">
                 <a>Contatos Úteis</a>
               </li>
+              <li class="li-four">
+                <a>Sobre</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -44,18 +47,18 @@
       </legend>
       <section id="form" class="form">
         <div class="health">
-          <h3>Nos diga uma coisa, como está a sua saúde?</h3>
-          <div>
-            <span class="good">
+          <h3>Nos diga uma coisa, como você está se sentindo?</h3>
+          <div class="form">
+            <span id="good" class="good">
               <a>
                 <img src="./assets/images/icons/icon-happy.png" alt="good-health">
-                <h4>Boa</h4>
+                <h4>Bem</h4>
               </a>
             </span>
             <span class="bad">
               <a href="ficha.php">
                 <img src="./assets/images/icons/icon-sad.png" alt="bad-health">
-                <h4>Ruim</h4>
+                <h4>Mal</h4>
               </a>
             </span>
             </span>
@@ -76,7 +79,48 @@
       </div>
     </footer>
   </div>
+  <div id="modal" class="modal">
+    <div class="modal-container">
+      <button class="close-modal">X</button>
+      <h2>Agradecemos pela sua resposta</h2>
+      <h3>Abaixo estão algumas orientações para continuar com sua
+        saúde em dia:
+      </h3>
+      <div class="text">
+        <p>
+          O ideal é evitar contato com outros indivíduos e obedecer o isolamento domiciliar. Em casa, é
+          recomendado que a pessoa
+          com suspeita informe os serviços de saúde sobre a situação, ligando para os mesmos. Em alguns casos, a
+          Vigilância em Saúde envia uma equipe para fazer o teste.
+        </p>
+        <p>
+          Como ainda não há uma vacina contra o novo coronavírus, o ideal é prevenir-se. Para isso, são
+          imprescindíveis a adoção
+          de medidas como:
+        </p>
+        <ul>
+          <li>Lavar as mãos com água e sabão em casa e, quando estiver na rua, usar álcool gel;</li>
+          <li>Evitar ao máximo sair de casa. Sair só se for extremamente necessário;</li>
+          <li>Ao tossir e espirrar, cobrir a boca e nariz com um lenço ou com a parte interna do braço;</li>
+          <li>Para os idosos o ideal é pedir para um conhecido jovem fazer as compras necessárias;</li>
+          <li>Higienizar constantemente a superfície de objetos que podem acomodar o vírus, como celulares,
+            mesas,
+            corrimãos etc.;</li>
+          <li>Evitar cumprimentos com abraços, beijos e apertos de mão para não contrair nem espalhar o vírus;
+          </li>
+          <li>Manter os ambientes bem ventilados;</li>
+          <li>Não compartilhar talheres e objetos pessoais com infectados;</li>
+          <li>Evitar aglomerações de pessoas.</li>
+        </ul>
+        <p>De acordo com a Organização Mundial de Saúde (OMS), não é necessário o uso de máscaras médicas como
+          medida de proteção.</p>
+        <p>Pessoas que não apresentam sintomas da doença ou que não tiveram contato com infectados só devem usar
+          máscaras se forem atender alguém com suspeita de contaminação pelo novo coronavírus.</p>
+      </div>
+    </div>
+  </div>
   <script src="./menu.js"></script>
+  <script src="./modal.js"></script>
   <script src="./maps.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8FX4dJt-hPT_e5uWKZJRWE1hE5Ja1EkQ&callback=initMap"></script>
