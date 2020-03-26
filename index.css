@@ -173,6 +173,7 @@ div.modal-container button {
   margin-left: auto;
   color: #fd0000;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 div.modal-container h2 {
