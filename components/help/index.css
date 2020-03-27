@@ -103,8 +103,14 @@ main article h2 {
   text-align: center;
 }
 
+main article p {
+  line-height: 20px;
+  margin-top: 0.5vh;
+}
+
 main article ul {
   margin-left: 1vw;
+  margin-top: 0.5vh;
 }
 
 div.container {

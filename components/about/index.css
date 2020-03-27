@@ -75,6 +75,45 @@ header nav ul li a:hover {
   cursor: pointer;
 }
 
+main div.container {
+  width: 100%;
+  background: #f8f8f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  height: 100%;
+  padding: 2vh 2vw;
+}
+
+main .container .content {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px #b6b6b6;
+  padding: 3vh 3vw;
+  border-radius: 14px;
+  height: 95%;
+  max-height: 400px;
+  overflow: auto;
+}
+
+main .container .content h1 {
+  margin-bottom: 2vh;
+  font-size: 2.3rem;
+  text-align: center;
+}
+
+main .container .content .text {
+  font-size: 1.3rem;
+  line-height: 20px;
+  color: #292929;
+}
+
+main .container .content .text p + p {
+  margin-top: 0.5vh;
+}
+
 footer {
   background-color: rgb(177, 177, 177);
   display: flex;
