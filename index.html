@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
+
+  <script src="http://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyC8FX4dJt-hPT_e5uWKZJRWE1hE5Ja1EkQ"></script>
+  <script src="./maps.js"></script>
+
   <title>Solidariza</title>
 </head>
 
-<body>
+<body onload="initMap()">
   <div id="container" class="container">
     <header>
       <div class="header-container">
@@ -45,6 +49,9 @@
       <legend id="legend">
         <h3>Legendas</h3>
       </legend>
+      <section id="sidebar">
+        <div id="directions_panel"></div>
+      </section>
       <section id="form" class="form">
         <div class="health">
           <h3>Nos diga uma coisa, como você está se sentindo?</h3>
@@ -121,9 +128,6 @@
   </div>
   <script src="./menu.js"></script>
   <script src="./modal.js"></script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8FX4dJt-hPT_e5uWKZJRWE1hE5Ja1EkQ&callback=initMap"></script>
-  <script src="./maps.js"></script>
 </body>
 
 </html>
