@@ -8,7 +8,12 @@ require_once '../.././services/ConexaoMysql.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="author" content="Equipe turma 1º semestre SI - UFSM FW 2020" />
+    <meta name="description" content="O projeto tem o objetivo da criação de um site para ajudar a sociedade frederiquense a lidar com a crise do novo coronavírus. Nele está contido informações relevantes sobre a Covid-19 e contatos úteis sobre hospitais, farmácias, supermercados e demais estabelecimentos. O site é fruto do trabalho conjunto dos alunos de Sistemas de Informação da Universidade Federal de Santa Maria, campus de Frederico Westphalen, que ingressaram no primeiro semestre de 2020 e estão interessados em promover o bem-estar social diante da pandemia da doença." />
+    <meta name="abstract" content="" />
+    <meta name="keywords" content="coronavírus, ufsm fw, UFSM, site coopera noroeste, covid-19, frederico westphalen" />
+    <title>Visualizar solicitação - Coopera Noroeste</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 
@@ -18,7 +23,7 @@ require_once '../.././services/ConexaoMysql.php';
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="#"><span>
-                    <img src="../.././assets/images/logos/coopera-fw.png" style="width: 100px" alt="logo-solidariza">
+                    <img src="../.././assets/images/logos/coopera.png" style="width: 100px" alt="logo-solidariza">
                 </span></a>
             <a class="navbar-brand" href="./index.php">Voltar ao formulário</a>
         </nav>
