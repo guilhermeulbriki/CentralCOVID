@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/index.css">
+
+  <script src="http://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyC8FX4dJt-hPT_e5uWKZJRWE1hE5Ja1EkQ"></script>
+  <script src="./js/maps.js"></script>
+
+  <title>Coopera Noroeste</title>
+</head>
+
+<body onload="initMap()">
+  <div id="container" class="container">
+    <header>
+      <div class="header-container">
+        <span>
+          <img src="./assets/images/logos/coopera-fw.png" alt="logo-solidariza">
+        </span>
+        <div class="menu-section">
+          <div class="menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+          <nav>
+            <ul>
+              <li class="li-one">
+                <a style="font-weight: 700;" href="./index.html">Início</a>
+              </li>
+              <li class="li-two">
+                <a href="./components/help/index.html">Ajuda</a>
+              </li>
+              <li class="li-three">
+                <a href="./components/contacts/index.html">Contatos Úteis</a>
+              </li>
+              <li class="li-four">
+                <a href="./components/about/index.html">Sobre</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="map"></div>
+      <legend id="legend">
+        <h3>Legendas</h3>
+      </legend>
+      <section id="sidebar">
+        <div id="directions_panel"></div>
+      </section>
+      <section id="form" class="form">
+        <div class="health">
+          <h3>Nos diga uma coisa, como você está se sentindo?</h3>
+          <div class="form">
+            <span id="good" class="good">
+              <a>
+                <img src="./assets/images/icons/icon-happy.png" alt="good-health">
+                <h4>Bem</h4>
+              </a>
+            </span>
+            <span class="bad">
+              <a href="./components/ficha/index.php">
+                <img src="./assets/images/icons/icon-sad.png" alt="bad-health">
+                <h4>Mal</h4>
+              </a>
+            </span>
+            </span>
+          </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-information">
+        <span class="images">
+          <img class="fw" src="./assets/images/logos/logo-fw.png" alt="logo-prefeitura-fw">
+          <img class="umbler" src="./assets/images/logos/logo-umbler.png" alt="logo-umbler">
+        </span>
+        <h2>Copyrigth® - Sistemas de Informação 2020</h2>
+        <span class="images">
+          <img class="ufsm" src="./assets/images/logos/logo-ufsm.png" alt="logo-ufsm">
+          <img class="si" src="./assets/images/logos/logo-si.png" alt="logo-sistemas-de-informacao">
+        </span>
+      </div>
+    </footer>
+  </div>
+  <div id="modal" class="modal">
+    <div class="modal-container">
+      <button class="close-modal">X</button>
+      <h2>Agradecemos pela sua resposta</h2>
+      <h3>Abaixo estão algumas orientações para continuar com sua
+        saúde em dia:
+      </h3>
+      <div class="text">
+        <p>
+          O ideal é evitar contato com outros indivíduos e obedecer o isolamento domiciliar. Em casa, é
+          recomendado que a pessoa
+          com suspeita informe os serviços de saúde sobre a situação, ligando para os mesmos. Em alguns casos, a
+          Vigilância em Saúde envia uma equipe para fazer o teste.
+        </p>
+        <p>
+          Como ainda não há uma vacina contra o novo coronavírus, o ideal é prevenir-se. Para isso, são
+          imprescindíveis a adoção
+          de medidas como:
+        </p>
+        <ul>
+          <li>Lavar as mãos com água e sabão em casa e, quando estiver na rua, usar álcool gel;</li>
+          <li>Evitar ao máximo sair de casa. Sair só se for extremamente necessário;</li>
+          <li>Ao tossir e espirrar, cobrir a boca e nariz com um lenço ou com a parte interna do braço;</li>
+          <li>Para os idosos o ideal é pedir para um conhecido jovem fazer as compras necessárias;</li>
+          <li>Higienizar constantemente a superfície de objetos que podem acomodar o vírus, como celulares,
+            mesas,
+            corrimãos etc.;</li>
+          <li>Evitar cumprimentos com abraços, beijos e apertos de mão para não contrair nem espalhar o vírus;
+          </li>
+          <li>Manter os ambientes bem ventilados;</li>
+          <li>Não compartilhar talheres e objetos pessoais com infectados;</li>
+          <li>Evitar aglomerações de pessoas.</li>
+        </ul>
+        <p>De acordo com a Organização Mundial de Saúde (OMS), não é necessário o uso de máscaras médicas como
+          medida de proteção.</p>
+        <p>Pessoas que não apresentam sintomas da doença ou que não tiveram contato com infectados só devem usar
+          máscaras se forem atender alguém com suspeita de contaminação pelo novo coronavírus.</p>
+      </div>
+    </div>
+  </div>
+  <script src="./js/menu.js"></script>
+  <script src="./js/modal.js"></script>
+</body>
+
+</html>
