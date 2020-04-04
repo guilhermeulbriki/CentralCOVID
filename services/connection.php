@@ -3,7 +3,7 @@
   $server     = 'localhost';
   $username   = 'root';
   $password   = '';
-  $database   = 'sistemasolidariza';
+  $database   = 'maps';
 
   $dsn        = "mysql:host=$server;dbname=$database";
 
