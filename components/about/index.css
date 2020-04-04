@@ -1,4 +1,4 @@
-main .about-container {
+.about-container {
   width: 100%;
   background: #f8f8f2;
   display: flex;
@@ -9,48 +9,50 @@ main .about-container {
   padding: 2vh 2vw;
 }
 
-main .about-container .content {
+.about-container .content {
   width: 90vw;
   max-width: 1000px;
   padding: 5vh 4vw;
   border-radius: 14px;
-  height: 80%;
+  height: 85%;
   max-height: 500px;
   overflow: auto;
 
-  background-color: #ffffff;
+  background-image: url(../../assets/images/logos/coopera-opacity.png);
+  background-size: contain;
+  background-repeat: no-repeat;
   box-shadow: 0 0 20px #b6b6b6;
 }
 
-main .about-container .content h1 {
+.about-container .content h1 {
   margin-bottom: 2vh;
   font-size: 2.3rem;
 }
 
-main .about-container .content .text {
+.about-container .content .text {
   font-size: 1.5rem;
   line-height: 25px;
   color: #292929;
   margin-bottom: 15px;
 }
 
-main .about-container .content .text p + p {
+.about-container .content .text p + p {
   margin-top: 0.5vh;
 }
 
-main .about-container .content a {
+.about-container .content a {
   text-decoration: underline;
   color: #292929;
   font-size: 1.5rem;
   transition: opacity 0.2s;
 }
 
-main .about-container .content a:hover {
+.about-container .content a:hover {
   opacity: 0.8;
 }
 
 @media (max-width: 630px) {
-  main .about-container .content {
+  .about-container .content {
     height: 90%;
     max-height: 700px;
   }

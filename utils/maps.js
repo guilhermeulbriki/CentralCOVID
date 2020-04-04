@@ -137,6 +137,6 @@ function initMap() {
     legend.appendChild(span);
   }
 
+  map.controls[google.maps.ControlPosition.LEFT_TOP].push(legend);
   // map.controls[google.maps.ControlPosition.LEFT_TOP].push(form);
-  map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
 }

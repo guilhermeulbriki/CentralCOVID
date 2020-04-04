@@ -1,47 +1,53 @@
-main .help-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  overflow: scroll;
+main .help-container { 
   padding: 4vh 2vw;
-  background-color: #f8f8f8;
-}
-
-main .help-container article {
-  margin: 0 2vw;
-  margin-bottom: 6vh;
-  border-radius: 20px;
-  padding: 4vh 3vw;
-  background-color: #ffffff;
-  box-shadow: 0 0 100px #e0e0e0;
-  font-size: 1.4rem;
+  overflow: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-items: center;
   align-items: center;
 }
 
+main .help-container article {
+  width: 90vw;
+  max-width: 900px;
+  margin-bottom: 5vh;
+  padding: 4vh 2vw;
+  border-radius: 15px;
+
+  box-shadow: 0 0 20px #dddddd;
+  background-color: #f8f8f8;
+}
+
+main .help-container article img {
+  background-color: #21376B;
+  height: 6vh;
+  padding: 5px;
+  border-radius: 50px;
+}
+
 main .help-container article h2 {
-  font-size: 2.3rem;
-  margin-bottom: 10px;
-  text-align: center;
+  margin: 10px 0;
+  font-size: 1.8rem;
 }
 
 main .help-container article p {
-  line-height: 20px;
-  margin-top: 0.5vh;
+  font-size: 1.5rem;
+  line-height: 25px;
 }
 
 main .help-container article ul {
-  margin-left: 1vw;
-  margin-top: 0.5vh;
+  font-size: 1.4rem;
+  margin: 5px 0 5px 20px;
+  line-height: 25px;
 }
 
-@media (max-width: 690px) {
-  main .help-container {
-    grid-template-columns: 1fr;
-  }
+main .help-container article a {
+  text-decoration: underline;
+  color: #21376B;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
 
-  main .help-container article ul {
-    margin-left: 3vw;
-  }
+main .help-container article a:hover {
+  opacity: 0.8;
 }
