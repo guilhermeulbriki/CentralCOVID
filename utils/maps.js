@@ -26,7 +26,7 @@ function initMap() {
       infowindow.setPosition(position);
       map.setCenter(position);
     }, () => {
-        handleLocationError(true, infowindow, map.getCenter());
+      handleLocationError(true, infowindow, map.getCenter());
     });
   } else {
     handleLocationError(false, infowindow, map.getCenter());
@@ -69,9 +69,9 @@ function initMap() {
     } else if (location.tipo == 3) {
       marcador = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
 
-    }else{
+    } else {
       marcador = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
-  }
+    }
 
     var content = '<div class="infoWindow"><strong>' + location.name + '</strong>'
       + '<br/>' + location.address
@@ -137,6 +137,6 @@ function initMap() {
     legend.appendChild(span);
   }
 
-  map.controls[google.maps.ControlPosition.LEFT_TOP].push(legend);
-  // map.controls[google.maps.ControlPosition.LEFT_TOP].push(form);
+  map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
+  map.controls[google.maps.ControlPosition.LEFT_TOP].push(form);
 }

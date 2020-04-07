@@ -55,5 +55,7 @@
   .about-container .content {
     height: 90%;
     max-height: 700px;
+
+    background-repeat: repeat;
   }
 }
