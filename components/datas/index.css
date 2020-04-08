@@ -1,0 +1,41 @@
+.content {
+  width: 100vw;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  overflow: auto;
+  padding: 4vh;
+}
+
+.content .datas {
+  background-color: #21376B;
+  margin: 3vh 2vw;
+  box-shadow: 0 0 5px #eeeeee;
+  text-align: center;
+}
+
+.content .datas h2 {
+  font-size: 2.2rem;
+  padding: 2vh;
+  color: #eeeeee;
+  border-radius: 10px;
+}
+
+.content .datas .data {
+  background-color: #f8f8f8;
+  padding: 20px;
+  height: 100%;
+}
+
+.content .datas .data article {
+  margin: 2vh 0;
+}
+
+.content .datas .data article h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1vh;
+}
+
+.content .datas .data article h4 {
+  font-size: 2rem;
+}
