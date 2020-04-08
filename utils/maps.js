@@ -127,7 +127,6 @@ function initMap() {
   };
 
   const legend = document.querySelector("#legend");
-  const form = document.querySelector("#form");
   for (var key in icons) {
     let type = icons[key];
     let name = type.name;
@@ -138,5 +137,4 @@ function initMap() {
   }
 
   map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
-  map.controls[google.maps.ControlPosition.LEFT_TOP].push(form);
 }

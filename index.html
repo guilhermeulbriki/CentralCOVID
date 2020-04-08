@@ -64,26 +64,6 @@
       <section id="sidebar">
         <div id="directions_panel"></div>
       </section>
-      <section id="form" class="form">
-        <div class="health">
-          <h3>Nos diga uma coisa, como você está se sentindo?</h3>
-          <div class="form">
-            <span id="good" class="good">
-              <a>
-                <img src="./assets/images/icons/icon-happy.png" alt="good-health">
-                <h4>Bem</h4>
-              </a>
-            </span>
-            <span class="bad">
-              <a href="./components/ficha/index.php">
-                <img src="./assets/images/icons/icon-sad.png" alt="bad-health">
-                <h4>Mal</h4>
-              </a>
-            </span>
-            </span>
-          </div>
-        </div>
-      </section>
     </main>
     <footer>
       <div class="footer-information">
@@ -138,8 +118,27 @@
       </div>
     </div>
   </div>
+  <section id="form" class="form">
+    <div id="health" class="health">
+      <h3>Nos diga uma coisa, como você está se sentindo?</h3>
+      <div class="form">
+        <span id="good" class="good span">
+          <a>
+            <img id="imgGood" src="./assets/images/icons/icon-happy.png" alt="good-health">
+            <h4>Bem</h4>
+          </a>
+        </span>
+        <span class="bad span">
+          <a href="./components/ficha/index.php">
+            <img id="imgBad" src="./assets/images/icons/icon-sad.png" alt="bad-health">
+            <h4>Mal</h4>
+          </a>
+        </span>
+      </div>
+    </div>
+  </section>
   <script src="./utils/menu.js"></script>
-  <script src="./utils/modal.js"></script>
+  <script src="./utils/health.js"></script>
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
