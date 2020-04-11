@@ -109,7 +109,7 @@ require_once './ConexaoMysql.php';
     <footer class="py-4 bg-light mt-auto">
       <div class="container-fluid">
         <div class="d-flex align-items-center justify-content-between small">
-          <div class="text-muted">Copyright &copy; Solidariza <?php echo date('Y'); ?></div>
+          <div class="text-muted">&copy; Central Covid-19 <?php echo date('Y'); ?></div>
         </div>
       </div>
     </footer>

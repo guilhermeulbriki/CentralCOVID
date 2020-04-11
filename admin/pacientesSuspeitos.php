@@ -11,7 +11,7 @@ require_once './ConexaoMysql.php';
   <meta name="description" content="" />
   <meta name="author" content="" />
   <link rel="icon" href="../assets/images/icons/central.png" type="image/icon type">
-  <title>Suspeitos - Portal Solidariza</title>
+  <title>Suspeitos - Central Covid-19</title>
   <link href="css/styles.css" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
   <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -374,7 +374,7 @@ require_once './ConexaoMysql.php';
     <footer class="py-4 bg-light mt-auto">
       <div class="container-fluid">
         <div class="d-flex align-items-center justify-content-between small">
-          <div class="text-muted">Copyright &copy; Solidariza <?php echo date('Y'); ?></div>
+          <div class="text-muted">&copy; Central Covid-19 <?php echo date('Y'); ?></div>
         </div>
       </div>
     </footer>

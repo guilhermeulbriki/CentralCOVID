@@ -74,26 +74,26 @@ $row = $resultado->fetch_assoc();
 $nome = $row['nomePaciente'];
 
 if ($row['viajouPaciente'] == 'SIM') {
-    $pais = $row['viajouPaciente'] . ' - Viajou para: ' . $row['paisViajado'];
+  $pais = $row['viajouPaciente'] . ' - Viajou para: ' . $row['paisViajado'];
 } else {
-    $pais = $row['viajouPaciente'];
+  $pais = $row['viajouPaciente'];
 }
 if ($row['visitaUbsPaciente'] == 'SIM') {
-    $ubs = $row['visitaUbsPaciente'] . ' - Visitou: ' . $row['ondeVisitou'];
+  $ubs = $row['visitaUbsPaciente'] . ' - Visitou: ' . $row['ondeVisitou'];
 } else {
-    $ubs = $row['visitaUbsPaciente'];
+  $ubs = $row['visitaUbsPaciente'];
 }
 
-if($row['sintomasExtraPaciente'] == NULL){
-    $sintExtra = "NÃO APRESENTOU DEMAIS SINTOMAS";
-}else{
-    $sintExtra = $row['sintomasExtraPaciente'];
+if ($row['sintomasExtraPaciente'] == NULL) {
+  $sintExtra = "NÃO APRESENTOU DEMAIS SINTOMAS";
+} else {
+  $sintExtra = $row['sintomasExtraPaciente'];
 }
 
-if($row['outrasComorbidades'] == NULL){
-    $comExtra = "NÃO APRESENTOU DEMAIS COMORBIDADES";
-}else{
-    $comExtra = $row['outrasComorbidades'];
+if ($row['outrasComorbidades'] == NULL) {
+  $comExtra = "NÃO APRESENTOU DEMAIS COMORBIDADES";
+} else {
+  $comExtra = $row['outrasComorbidades'];
 }
 $html = "
 <title>Ficha paciente TESTE [" . $nome . "]</title>
@@ -140,8 +140,8 @@ $html = "
     </style>
         <p class='timbre'>
         Impressa por: " .
-    $_SESSION['nome']
-    . " - " . $dataLocal  . "</p>
+  $_SESSION['nome']
+  . " - " . $dataLocal  . "</p>
     <table class='margem' style='width:100%' >
     
     <tr>
@@ -309,7 +309,7 @@ $html = "
         <br>
         <p class='centro'>......................................................................................................................................</p>
         <p class='centro'>Assinatura do responsável pela avaliação</p></strong> 
-        <p class='centro'>    " . $row['nomeAvaliador'] ."(" . $row['descricao'] . ")</p>
+        <p class='centro'>    " . $row['nomeAvaliador'] . "(" . $row['descricao'] . ")</p>
 
         </td></tr>
     <table>";
@@ -329,8 +329,8 @@ $dompdf->render();
 
 /* Exibe */
 $dompdf->stream(
-    $nome . $dataLocal . '.pdf', /* Nome do arquivo de saída */
-    array(
-        'Attachment' => false /* Para download, altere para true */
-    )
+  $nome . $dataLocal . '.pdf', /* Nome do arquivo de saída */
+  array(
+    'Attachment' => false /* Para download, altere para true */
+  )
 );
