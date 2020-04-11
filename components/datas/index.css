@@ -2,7 +2,7 @@
   width: 100vw;
   max-width: 1400px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   overflow: auto;
   padding: 4vh;
 }

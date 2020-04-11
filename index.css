@@ -144,7 +144,7 @@ div.modal-container div.text ul {
 }
 
 main div#map {
-  height: 80vh;
+  height: 100%;
   width: 100vw;
   max-width: 1500px;
 }
@@ -207,7 +207,7 @@ main legend#legend span img {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    min-width: 200px;
+    min-width: 210px;
     border-radius: 8px;
   }
 
@@ -229,7 +229,7 @@ main legend#legend span img {
     display: flex;
     justify-content: space-between;
     width: 7vw;
-    min-width: 40px;
+    min-width: 50px;
   }
 
   .form div.health.unclicked .form section {
