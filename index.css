@@ -86,6 +86,7 @@ div.modal.show {
   justify-content: center;
   align-items: center;
   animation: show-modal 1s ease-out;
+  z-index: 1;
 }
 
 div.modal {
@@ -224,22 +225,33 @@ main legend#legend span img {
     justify-content: space-evenly;
   }
 
-  .form div.health .form span {
+  .form div.health .form section {
     display: flex;
     justify-content: space-between;
     width: 7vw;
     min-width: 40px;
   }
 
-  .form div.health.unclicked .form span {
-    width: 14vw;
+  .form div.health.unclicked .form section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
-  .form div.health .form span img {
+  .form div.health.unclicked .form section a {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .form div.health .form section img {
     max-height: 30px;
   }
 
-  .form div.health.unclicked .form span img {
+  .form div.health.unclicked .form section a img {
     max-height: 50px;
   }
 }
