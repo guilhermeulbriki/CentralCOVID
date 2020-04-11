@@ -6136,7 +6136,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #21376b !important;
+  background-color: #087E8B !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -6149,11 +6149,11 @@ button.bg-dark:focus {
   background-color: #fff !important;
 }
 .bg-ufsm {
-  background-color: #21376b !important;
+  background-color: #EDEBE8 !important;
 }
 
 .bg-footerSite {
-  background-color: #005C8B !important;
+  background-color: #071013 !important;
 }
 .bg-transparent {
   background-color: transparent !important;

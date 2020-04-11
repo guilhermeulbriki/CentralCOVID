@@ -8,7 +8,7 @@ section.form {
   position: absolute;
   top: 11vh;
   left: 0px;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   margin-top: 1vh;
@@ -27,8 +27,9 @@ section.form {
   width: 40vw;
   max-width: 400px;
   height: 40vh;
+  max-height: 300px;
   justify-content: center;
-  padding: 5vh;
+  padding: 2vh;
   animation: show-modal 0.9s ease-out;
 }
 
@@ -49,24 +50,29 @@ section.form {
   align-items: center;
 }
 
-.form div.health div.form span {
+.form div.health div.form section:hover {
+  cursor: pointer;
+}
+
+.form div.health div.form section a {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.form div.health div.form span:hover {
-  cursor: pointer;
-}
-
-.form div.health div.form span a {
-  text-decoration: none;
-}
-
-.form div.health div.form span h4 {
+.form div.health div.form section h4 {
   font-size: 1.3rem;
   text-align: center;
   color: #000000;
+}
+
+.form div.health div.form section img {
+  max-height: 30px; 
+}
+
+.form div.health.unclicked div.form section img {
+  max-height: 60px; 
 }
 
 div.modal.show {
@@ -91,7 +97,7 @@ div.modal-container {
   max-width: 700px;
   max-height: 75vh;
   overflow: auto;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,14 +106,14 @@ div.modal-container {
 }
 
 div.modal-container button {
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   border: 0px;
   font-size: 2rem;
   position: relative;
   top: 1vh;
   display: block;
   margin-left: auto;
-  color: #fd0000;
+  color: #FF5A5F;
   font-weight: bolder;
   cursor: pointer;
 }

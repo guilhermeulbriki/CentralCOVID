@@ -14,12 +14,12 @@ main .help-container article {
   padding: 4vh 2vw;
   border-radius: 15px;
 
-  box-shadow: 0 0 20px #dddddd;
-  background-color: #f8f8f8;
+  box-shadow: 0 0 20px #EDEBE8;
+  background-color: #f5f5f5;
 }
 
 main .help-container article img {
-  background-color: #21376B;
+  background-color: #087E8B;
   height: 6vh;
   padding: 5px;
   border-radius: 50px;
@@ -43,7 +43,7 @@ main .help-container article ul {
 
 main .help-container article a {
   text-decoration: underline;
-  color: #21376B;
+  color: #FF5A5F;
   cursor: pointer;
   transition: opacity 0.3s;
 }

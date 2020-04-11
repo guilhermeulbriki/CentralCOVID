@@ -1,5 +1,10 @@
 <?php
 require_once '../.././services/ConexaoMysql.php';
+function ConvertToDate($data)
+{
+    $data = explode('/', $data);
+    return ' ' . $data[2] . '-' . $data[1] . '-' . $data[0];
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,19 +16,25 @@ require_once '../.././services/ConexaoMysql.php';
     <meta name="author" content="Equipe turma 1º semestre SI - UFSM FW 2020" />
     <meta name="description" content="O projeto tem o objetivo da criação de um site para ajudar a sociedade frederiquense a lidar com a crise do novo coronavírus. Nele está contido informações relevantes sobre a Covid-19 e contatos úteis sobre hospitais, farmácias, supermercados e demais estabelecimentos. O site é fruto do trabalho conjunto dos alunos de Sistemas de Informação da Universidade Federal de Santa Maria, campus de Frederico Westphalen, que ingressaram no primeiro semestre de 2020 e estão interessados em promover o bem-estar social diante da pandemia da doença." />
     <meta name="abstract" content="" />
-    <meta name="keywords" content="coronavírus, ufsm fw, UFSM, site central covid-19, covid-19, frederico westphalen" />
-    <title>Visualizar solicitação - Central Covid-19</title>
+    <meta name="keywords" content="coronavírus, ufsm fw, UFSM, site coopera noroeste, covid-19, frederico westphalen" />
+    <title>Visualizar solicitação - Coopera Noroeste</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="#"><span>
-                    <img src="../.././assets/images/logos/logo_covid_branco.png" style="width: 100px" alt="logo-solidariza">
+                    <img src="../.././assets/images/logos/coopera.png" style="width: 100px" alt="logo-solidariza">
                 </span></a>
             <a class="navbar-brand" href="./index.php">Voltar ao formulário</a>
         </nav>
@@ -42,11 +53,11 @@ require_once '../.././services/ConexaoMysql.php';
                             <div class="form-row">
                                 <div class="form-group col-md-2">
                                     <label for="cpf">CPF</label>
-                                    <input type="text" autocomplete="off" class="form-control" id="cpf" name="cpf" placeholder="Ex. : 000.000.000-00">
+                                    <input type="text" autocomplete="off" required class="form-control" id="cpf" name="cpf" placeholder="Ex. : 000.000.000-00">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="dataNascimento">Data Nascimento</label>
-                                    <input type="date" autocomplete="off" class="form-control" name="dataNascimento" id="dataNascimento">
+                                    <input type="text" autocomplete="off" class="form-control" name="dataNascimento" id="dataNascimento" placeholder="Ex. : 00/00/0000">
                                 </div>
                             </div>
                             <input type="submit" name="visualizaInformacao" class="btn btn-primary" value="Buscar"></input>
@@ -59,7 +70,8 @@ require_once '../.././services/ConexaoMysql.php';
                     $conexao = new ConexaoMysql();
                     $conexao->Conecta();
                     $cpf = $conexao->limpar_texto($_POST['cpf']);
-                    $sql = "SELECT * FROM formulariopacientes WHERE cpfPaciente ='" . $cpf . "'AND dataNascPaciente ='" . $_POST['dataNascimento'] . "'";
+                    $dateNasc = ConvertToDate($_POST['dataNascimento']);
+                    $sql = "SELECT * FROM formulariopacientes WHERE cpfPaciente ='" . $cpf . "'AND dataNascPaciente ='" .$dateNasc."'";
                     $resultado = $conexao->Consulta($sql);
                     $row = $resultado->fetch_assoc();
 
@@ -86,7 +98,7 @@ require_once '../.././services/ConexaoMysql.php';
 
                                 </div>
                             <?php } else { ?>
-                                <p>Infome todos os parâmetros acima!</p>
+                                <p>Paramentros incorretos e/ou não cadastrado no banco</p>
                             <?php } ?>
 
                             <a href="../.././components/help/index.html" class="btn btn-warning" aria-pressed="true">Ajuda e orientações</a>
@@ -117,9 +129,27 @@ require_once '../.././services/ConexaoMysql.php';
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#dataNascimento').mask('00/00/0000');
+            $('#cpf').mask('000.000.000-00');
+        });
+    </script>
+    <!--Libras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!--/Libras-->
+
 </body>
 
 </html>
