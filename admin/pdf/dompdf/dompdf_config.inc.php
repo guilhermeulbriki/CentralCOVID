@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package dompdf
  * @link    http://dompdf.github.com/
@@ -9,7 +10,9 @@
  * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  */
 
-if ( class_exists( 'DOMPDF' , false ) ) { return; }
+if (class_exists('DOMPDF', false)) {
+  return;
+}
 
 PHP_VERSION >= 5.0 or die("DOMPDF requires PHP 5.0+");
 
@@ -32,19 +35,19 @@ define("DOMPDF_LIB_DIR", DOMPDF_DIR . "/lib");
  * Some installations don't have $_SERVER['DOCUMENT_ROOT']
  * http://fyneworks.blogspot.com/2007/08/php-documentroot-in-iis-windows-servers.html
  */
-if( !isset($_SERVER['DOCUMENT_ROOT']) ) {
+if (!isset($_SERVER['DOCUMENT_ROOT'])) {
   $path = "";
-  
-  if ( isset($_SERVER['SCRIPT_FILENAME']) )
+
+  if (isset($_SERVER['SCRIPT_FILENAME']))
     $path = $_SERVER['SCRIPT_FILENAME'];
-  elseif ( isset($_SERVER['PATH_TRANSLATED']) )
+  elseif (isset($_SERVER['PATH_TRANSLATED']))
     $path = str_replace('\\\\', '\\', $_SERVER['PATH_TRANSLATED']);
-    
-  $_SERVER['DOCUMENT_ROOT'] = str_replace( '\\', '/', substr($path, 0, 0-strlen($_SERVER['PHP_SELF'])));
+
+  $_SERVER['DOCUMENT_ROOT'] = str_replace('\\', '/', substr($path, 0, 0 - strlen($_SERVER['PHP_SELF'])));
 }
 
 /** Include the custom config file if it exists */
-if ( file_exists(DOMPDF_DIR . "/dompdf_config.custom.inc.php") ){
+if (file_exists(DOMPDF_DIR . "/dompdf_config.custom.inc.php")) {
   require_once(DOMPDF_DIR . "/dompdf_config.custom.inc.php");
 }
 
@@ -281,13 +284,13 @@ def("DOMPDF_ENABLE_JAVASCRIPT", true);
  *
  * @var bool
  */
-def("DOMPDF_ENABLE_REMOTE", false);
+def("DOMPDF_ENABLE_REMOTE", true);
 
 /**
  * The debug output log
  * @var string
  */
-def("DOMPDF_LOG_OUTPUT_FILE", DOMPDF_FONT_DIR."log.htm");
+def("DOMPDF_LOG_OUTPUT_FILE", DOMPDF_FONT_DIR . "log.htm");
 
 /**
  * A ratio applied to the fonts height to be more like browsers' line height

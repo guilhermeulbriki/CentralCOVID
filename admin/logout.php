@@ -10,6 +10,4 @@ $_SESSION['adicionaMenu'] = 'deslogado';
 $msg = md5('logout');
 //redireciona para a página de login
 //QUERYSTRING: formada de uma variável e um valor
-header('location:index.php?msg=' . $msg);
-?>
-
+header('location:login.php?msg=' . $msg);
