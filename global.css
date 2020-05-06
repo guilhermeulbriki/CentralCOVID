@@ -91,21 +91,20 @@ main {
 footer {
   background-color: #071013;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
 }
 
 footer div.footer-information {
-  height: 90%;
-  max-height: 90%;
   width: 100%;
   padding: 0 7vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  background-color: #071013;
 }
 
-footer div.footer-information h2 {
+footer div.footer-information span h2 {
   text-align: center;
   font-size: 1.6rem;
   color: #f5f5f5;
@@ -115,49 +114,6 @@ footer div.footer-information h2 {
 footer div.footer-information span {
   display: flex;
   align-items: center;
-}
-
-footer div.footer-information img {
-  width: 11vh;
-  margin-right: 20px;
-}
-
-footer div.footer-information img.si {
-  width: 5vh;
-}
-
-@media (max-width: 824px) {
-  footer div.footer-information {
-    padding: 3vw;
-  }
-
-  footer div.footer-information img {
-    width: 11vh;
-    margin-right: 10px;
-  }
-
-  footer div.footer-information img.si {
-    width: 4vh;
-  }
-}
-
-@media (max-width: 690px) {
-  footer div.footer-information {
-    padding: 3vw;
-  }
-
-  footer div.footer-information h2 {
-    font-size: 1.3rem;
-  }
-
-  footer div.footer-information img {
-    width: 10vh;
-    margin-right: 10px;
-  }
-
-  footer div.footer-information img.si {
-    width: 3vh;
-  }
 }
 
 @media (max-width: 630px) {
@@ -254,11 +210,6 @@ footer div.footer-information img.si {
     font-size: 3rem;
     line-height: 8rem;
     display: block;
-  }
-
-  footer div.footer-information img {
-    width: 9vh;
-    margin-right: 10px;
   }
 }
 

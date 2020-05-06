@@ -1,34 +1,46 @@
 .about-container {
     height: 100%;
-    max-height: 80vh;
     width: 100vw;
     overflow: auto;
-    padding: 0 20px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.about-container .description {
+ .description {
     margin-top: 10px;
     font-size: 2rem;
 }
 
-.text {
+ .text {
     margin-top: 20px;
-    font-size: 1.2rem;
-    max-width: 1200px;
+    font-size: 1.4rem;
+    max-width: 1000px;
+    width: 100vw;
+    padding: 0 20px;
     line-height: 20px;
 }
 
-.timeline {
+ .text p {
+    margin-top: 5px;
+}
+
+ .timeline-team {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
     max-width: 1200px;
+}
+
+ .timeline-team .timeline {
+    min-width: 330px;
+    max-width: 540px;
     position: relative;
     margin: 0 auto;
 }
 
-.timeline::after {
+ .timeline-team .timeline::after {
     content: '';
     position: absolute;
     width: 6px;
@@ -39,14 +51,14 @@
     margin-left: -3px;
 }
 
-.container2 {
+ .timeline-team .timeline .timeline-container {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
     width: 50%;
 }
 
-.container2::after {
+ .timeline-team .timeline .timeline-container::after {
     content: '';
     position: absolute;
     width: 25px;
@@ -133,6 +145,49 @@ h1 {
     padding: 10px;
 }
 
+.timeline-team .team {
+    padding: 0px 10px;
+}
+
+.timeline-team .team h2 {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.timeline-team .team h3 {
+    font-size: 1.4rem;
+    margin-top: 5px;
+}
+
+.timeline-team .team h4 {
+    font-size: 1.3rem;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.timeline-team .team p {
+    font-size: 1.2rem;
+    line-height: 20px;
+    max-width: 600px;
+}
+
+.support {
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px 30px;
+    background: #071013;
+}
+
+.support .images {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.support .images img {
+    height: 60px;
+}
+
 @media screen and (max-width: 900px) {
     .column {
         width: 50%;
@@ -140,17 +195,25 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-    .timeline::after {
+    .timeline-team {
+        flex-direction: column;
+    }
+
+    .timeline-team .timeline {
+        margin-bottom: 30px;
+    }
+
+    .timeline-team .timeline::after {
         left: 31px;
     }
 
-    .container2 {
+    .timeline-team .timeline .timeline-container {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
 
-    .container2::before {
+    .timeline-team .timeline .timeline-container::before {
         left: 60px;
         border: medium solid #fff;
         border-width: 10px 10px 10px 0;
