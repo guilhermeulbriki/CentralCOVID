@@ -187,33 +187,6 @@ main legend#legend span img {
   margin-right: 4px;
 }
 
-.cufa {
-  position: absolute;
-  right: 1vw;
-  top: 12vh;
-  padding: 1vh;
-  border-radius: 15px;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-.cufa a img {
-  height: 3vh;
-}
-
-.cufa a:hover + .help {
-  display: flex;
-  transition: opacity 2s;
-}
-
-.cufa .help {
-  display: none;
-  margin: 0 10px;
-  font-size: 1.3rem;
-}
-
 @media (max-width: 960px) {
   main div.informations aside.health .form div.health-container {
     max-width: 20vw;
